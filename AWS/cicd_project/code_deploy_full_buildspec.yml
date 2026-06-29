@@ -1,0 +1,51 @@
+version: 0.2
+
+env:
+  shell: bash
+
+  variables:
+    NAME: value
+
+  parameter-store:
+    PASSWORD: /prod/db/password
+
+  secrets-manager:
+    API_KEY: my-secret:apikey
+
+phases:
+
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - echo Install
+
+  pre_build:
+    commands:
+      - echo Pre Build
+
+  build:
+    commands:
+      - echo Build
+
+  post_build:
+    commands:
+      - echo Post Build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
+  discard-paths: no
+  name: output-artifact
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
+    - 'node_modules/**/*'
+
+reports:
+  junit_reports:
+    files:
+      - test-results/*.xml
+    file-format: JUNITXML
