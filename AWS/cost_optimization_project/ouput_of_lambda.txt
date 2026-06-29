@@ -1,0 +1,15 @@
+Status: Succeeded
+Test Event Name: test
+
+Response:
+null
+
+The area below shows the last 4 KB of the execution log.
+
+Function Logs:
+START RequestId: dda4c707-48f4-4959-bace-fb7c3300c49f Version: $LATEST
+Deleted EBS snapshot snap-0c75919bb9c5f591f as its associated volume was not found.
+END RequestId: dda4c707-48f4-4959-bace-fb7c3300c49f
+REPORT RequestId: dda4c707-48f4-4959-bace-fb7c3300c49f	Duration: 5304.85 ms	Billed Duration: 5695 ms	Memory Size: 128 MB	Max Memory Used: 98 MB	Init Duration: 389.31 ms
+
+Request ID: dda4c707-48f4-4959-bace-fb7c3300c49f
