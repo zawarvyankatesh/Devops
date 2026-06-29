@@ -1,0 +1,28 @@
+What is AWS CodeDeploy?
+
+AWS CodeDeploy automates application deployment to servers such as:
+
+Amazon EC2
+On-premises servers
+AWS Lambda
+Amazon ECS
+
+Think of it like this:
+
+GitHub
+   │
+   ▼
+CodeBuild
+   │
+Creates artifact
+   │
+   ▼
+CodeDeploy
+   │
+Deploys artifact
+   ▼
+EC2 Servers
+
+CodeBuild creates the application.
+
+CodeDeploy installs it on servers.
